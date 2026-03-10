@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['username'])){
+    header("Location: login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +24,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="#hero">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#daftar-puding">Produk</a>
@@ -37,17 +46,20 @@
                 <button id="btn-theme" class="btn btn-outline-light btn-sm">
                     Mode Gelap
                 </button>
+                    <a href="controller/logout.php" class="btn btn-danger btn-sm">
+                    Logout
+                    </a>
             </div>
         </div>
     </nav>
 
-    <div class="hero text-center text-white d-flex align-items-center">
+    <div id="hero" class="hero text-center text-white d-flex align-items-center">
         <div class="container">
             <h1>COFFE SHOP PUDING</h1>
             <p>rasakan kelembutan dan manisnya melimpah di mulut</p>
         </div>
     </div>
-
+    
     <div class="container mt-5">
         <div class="row text-center">
             <div class="col-md-4">
