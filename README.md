@@ -53,4 +53,3 @@
     - Keterangan:
        1. Gambar sepatu, background halaman login, dan ikon.
     - Tujuan: Menampilkan konten visual agar tampilan lebih menarik.
-
