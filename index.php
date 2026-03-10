@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['username'])){
+    header("Location: login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +24,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="#hero">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#daftar-puding">Produk</a>
@@ -37,16 +46,19 @@
                 <button id="btn-theme" class="btn btn-outline-light btn-sm">
                     Mode Gelap
                 </button>
+                    <a href="controller/logout.php" class="btn btn-danger btn-sm">
+                    Logout
+                    </a>
             </div>
         </div>
     </nav>
 
-    <div class="hero text-center text-white d-flex align-items-center">
+    <div id="hero" class="hero text-center text-white d-flex align-items-center">
         <div class="container">
-            <h1>COFFE SHOP PUDING</h1>
-            <p>rasakan kelembutan dan manisnya melimpah di mulut</p>
-        </div>
+        <h1>COFFE SHOP PUDING</h1>
+        <p>rasakan kelembutan dan manisnya melimpah di mulut</p>
     </div>
+</div>
 
     <div class="container mt-5">
         <div class="row text-center">
@@ -86,7 +98,7 @@
                     <img src="assets/CARAMEL.jpg" class="card-img-top" />
                     <div class="card-body">
                         <h5 class="card-title">Caramel</h5>
-                        <p class="card-text harga-text">Harga: Rp 429.000</p>
+                        <p class="card-text harga-text">Harga: Rp 499.000</p>
                         <p class="card-text stok-text">Stok: 10</p>
                         <div class="d-flex justify-content-between">
                             <button class="btn btn-primary btn-detail w-50 me-2">Beli</button>
@@ -161,7 +173,8 @@
                     <input type="number" class="form-control" placeholder="Masukkan harga" />
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Stok</label>
+                   
+                <label class="form-label">Stok</label>
                     <input type="number" class="form-control" placeholder="Masukkan Stok" />
                 </div>
                 <div class="mb-3">
