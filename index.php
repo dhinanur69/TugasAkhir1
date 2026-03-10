@@ -55,11 +55,11 @@ if(!isset($_SESSION['username'])){
 
     <div id="hero" class="hero text-center text-white d-flex align-items-center">
         <div class="container">
-            <h1>COFFE SHOP PUDING</h1>
-            <p>rasakan kelembutan dan manisnya melimpah di mulut</p>
-        </div>
+        <h1>COFFE SHOP PUDING</h1>
+        <p>rasakan kelembutan dan manisnya melimpah di mulut</p>
     </div>
-    
+</div>
+
     <div class="container mt-5">
         <div class="row text-center">
             <div class="col-md-4">
@@ -173,7 +173,8 @@ if(!isset($_SESSION['username'])){
                     <input type="number" class="form-control" placeholder="Masukkan harga" />
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Stok</label>
+                   
+                <label class="form-label">Stok</label>
                     <input type="number" class="form-control" placeholder="Masukkan Stok" />
                 </div>
                 <div class="mb-3">
