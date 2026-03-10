@@ -1,4 +1,3 @@
-<!-- update tugas akhir -->
 <?php
 session_start();
 
@@ -99,7 +98,7 @@ if(!isset($_SESSION['username'])){
                     <img src="assets/CARAMEL.jpg" class="card-img-top" />
                     <div class="card-body">
                         <h5 class="card-title">Caramel</h5>
-                        <p class="card-text harga-text">Harga: Rp 429.000</p>
+                        <p class="card-text harga-text">Harga: Rp 499.000</p>
                         <p class="card-text stok-text">Stok: 10</p>
                         <div class="d-flex justify-content-between">
                             <button class="btn btn-primary btn-detail w-50 me-2">Beli</button>
